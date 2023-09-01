@@ -1,0 +1,210 @@
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #E8F3FD;
+}
+
+.header {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background: #E8F3FD;
+}
+
+.logo {
+    width: 21vw;
+    height: 100%;
+}
+
+.logo a {
+    white-space: nowrap;
+    color: #131D78;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    top: 3.5vh;
+    left: 10vw;
+}
+
+.search {
+    width: 58vw;
+    height: 100%;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+    width: 56vw;
+    height: 5vh;
+    border-radius: 0.8vw;
+    background: #7E879229;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    position: relative;
+    top: 3.5vh;
+}
+
+.search form img {
+    width: 1.5vw;
+    height: auto;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+.search form input {
+    color: #7E8792A6;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 50vw;
+}
+
+::placeholder {
+    color: #7E8792A6;
+}
+
+.prifile {
+    width:100%;
+    height:100%;
+}
+
+.profile img {
+    width: 2.2vmax;
+    height: 2.2vmax;
+    border-radius: 2.2vw;
+    background: lightgray 50% / cover no-repeat;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    position: relative;
+    top: 1.8vw;
+}
+
+.profile a {
+    color: #131D78;
+    text-align: right;
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.2rem;
+    position: relative;
+    top: 1.2vw;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 10vh);
+}
+
+.navigation {
+    width: 21vw;
+    height: 100%;
+}
+
+.resume {
+    width: 10vw;
+    height: 5.7vh;
+    border-radius: 0.9vw;
+    list-style: none;
+    position: absolute;
+    top: 13vh;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow : 0.2vw 0.2vw 0.2vw #7E8792A6;
+    transition-duration: 0.08s;
+    cursor: pointer;
+}
+
+.resume img {
+    width: 1.2vw;
+    height: auto;
+    position: relative;
+    left: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 1vw;
+}
+
+.resume a {
+    font-family: Inter;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 0.5vw;
+}
+
+.company {
+    width: 10vw;
+    height: 5.7vh;
+    border-radius: 0.9vw;
+    list-style: none;
+    position: absolute;
+    top: 21vh;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow : 0.2vw 0.2vw 0.2vw #7E8792A6;
+    transition-duration: 0.08s;
+    cursor: pointer;
+}
+
+.company img {
+    width: 1.2vw;
+    height: auto;
+    position: relative;
+    left: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 1vw;
+}
+
+.company a {
+    font-family: Inter;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.resume:active, .company:active {
+    box-shadow : none;
+    margin-top: 0.2vh;
+    margin-left: 0.2vw;
+}
+
+/*스크롤바*/
+
+::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAFBFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ABB1B8;
+    border-radius: 2vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7E8792;
+}

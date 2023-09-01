@@ -1,0 +1,269 @@
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+.resume {
+    background: #D7E2EC
+}
+
+.resume a {
+    color: #7E8792;
+}
+
+.company {
+    background: #0062FF;
+}
+
+.company a {
+    color: #FFF;
+}
+
+.main {
+    display: flex;
+}
+
+.chatbot {
+    width: 33vw;
+    height: 80vh;
+    margin-top:2vh;
+    margin-left:1vw;
+}
+
+.bot {
+    position:relative;
+    display: flex;
+    width: 33vw;
+    height: 8vh;
+    border-radius: 1.5vw 1.5vw 0 0;
+    background: #0062FF;
+}
+
+.bot-profile {
+    width: 2.5vmax;
+    height: 2.5vmax;
+    border-radius: 50%;
+    background: #84abfa;
+    border: 0.15vw solid #787878;
+    position: absolute;
+    top: 1.2vh;
+    left: 1.2vw;
+}
+
+.bot-profile img {
+    width: 2.5vmax;
+    height: 2.5vmax;
+    border-radius: 50%;
+    filter: invert(54%) sepia(2%) saturate(22%) hue-rotate(13deg) brightness(86%) contrast(88%);
+}
+
+.bot-name {
+    color: #D9D9D9;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: absolute;
+    top: 1.5vh;
+    left: 5vw;
+}
+
+.bot-state {
+    display: flex;
+}
+
+.bot-state div {
+    width: 0.5vmax;
+    height: 0.5vmax;
+    border-radius: 50%;
+    background: #5AC275;
+    border: 0.1vw solid #FFF;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
+
+.bot-state a {
+    color: #D9D9D991;
+    text-align: right;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    top: 4.7vh;
+    left: 6vw;
+}
+
+.chat {
+    width: 33vw;
+    height: 70vh;
+    background: #FAFBFF;
+    border-radius: 0 0 1.5vw 1.5vw;
+}
+
+.talk {
+    overflow: auto;
+    width: 33vw;
+    height: 62vh;
+    background: #FAFBFF;
+    position: relative;
+}
+
+.bot-talk {
+    display: block;
+}
+
+.bot-talk img {
+    width: 2.5vmax;
+    height: 2.5vmax;
+    border-radius: 50%;
+    filter: invert(54%) sepia(2%) saturate(22%) hue-rotate(13deg) brightness(86%) contrast(88%);
+    border: 0.15vw solid #7E879280;
+}
+
+hr {
+    width: 31vw;
+    height: 0.2vh;
+    background: #0062FF80;
+    border: #0062FF80;
+}
+
+.message {
+    position: relative;
+    display: flex;
+    height: 4.5vh;
+    align-items: center;
+}
+
+.message input {
+    color: #7E8792A6;
+    background: #FAFBFF;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    outline: none;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    width: 33vw;
+}
+
+.submit {
+    border: none;
+    width: 4vw;
+    height: 5vh;
+    border-radius: 1vw;
+    background: #E8F3FD;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    margin-right: 1.5vw;
+    cursor: pointer;
+}
+
+.submit img {
+    width: 1vmax;
+}
+
+.file {
+    position: relative;
+    height: 80vh;
+    margin-top:2vh;
+}
+
+.paper {
+    width: 27vw;
+    height: 72vh;
+    border-radius: 1.5vw;
+    background: #D7E2EC;
+    position: relative;
+    margin-left:0;
+    left: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 23vw;
+    height: 65vh;
+    background: #FFF;
+}
+
+.buttons {
+    position: relative;
+}
+
+.download {
+    border: none;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 1.5vw;
+    background: #FFF;
+    position: absolute;
+    top: 1.5vh;
+    left: 7.5vw;
+    cursor: pointer;
+}
+
+.download div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download img {
+    width: 1.5vw;
+    height: auto;
+    filter: invert(78%) sepia(14%) saturate(123%) hue-rotate(172deg) brightness(91%) contrast(85%);
+    margin-right: 0.2vw;
+}
+
+.download a {
+    color: #7E8792;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.translate {
+    border: none;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 1.5vw;
+    background: #FFF;
+    position: absolute;
+    top: 1.5vh;
+    left: 15.5vw;
+    cursor: pointer;
+}
+
+.translate div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.translate img {
+    width: 1.5vw;
+    height: auto;
+    margin-right: 0.2vw;
+}
+
+.translate a {
+    color: #7E8792;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.submit:hover, .download:hover, .translate:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

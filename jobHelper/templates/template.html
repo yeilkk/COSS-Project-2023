@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Helper.</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    {% block style %}{% endblock %}
+</head>
+
+<body>
+    <!--상단바-->
+    <header class="header">
+        <a class="logo" onclick="window.location.href='/'">Job Helper.</a>
+        <form class="search">
+            <img src="{{ url_for('static', filename= 'src/search.png')}}">
+            <input type="text" placeholder="Need any help?"> <!--검색 기능 추가-->
+        </form>
+        <img src="{{ url_for('static', filename= 'src/profile.png')}}" class="profile">
+        <a class="name">김제니</a>
+    </header>
+    <div class="container">
+        <!--이력서/지원기업 선택탭-->
+        <div class="navigation">
+            <div class="resume"> <!--이력서 이동 링크 추가-->
+                <img src="{{ url_for('static', filename= 'src/resume1.png')}}">
+                <a onclick="window.location.href='/'">이력서</a>
+            </div>
+            <div class="company"> <!--지원 기업 이동 링크 추가-->
+                <img src="{{ url_for('static', filename= 'src/company1.png')}}">
+                <a onclick="window.location.href='/company'">지원 기업</a>
+            </div>
+        </div>
+        <!--작성화면-->
+        <div class="main">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>

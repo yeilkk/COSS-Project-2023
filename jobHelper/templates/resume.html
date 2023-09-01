@@ -1,0 +1,67 @@
+{% extends 'template.html' %}
+
+{% block style %}
+    <link href="{{ url_for('static', filename='resume.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <!--챗봇 화면-->
+    <div class="chatbot">
+                <div class="bot">
+                    <div class="bot-profile">
+                        <img src="../static/img/chatbot.png">
+                    </div>
+                    <div class="bot-name">
+                        <a>Job Helper.</a>
+                    </div>
+                    <div class="bot-state">
+                        <div></div>
+                        <a>Online Now</a>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="talk">
+                        <div class="bot-talk"> <!--챗봇 말풍선-->
+                            <img src="{{ url_for('static', filename='src/chatbot.png') }}">
+                            <div class="bot-bubble">
+                                <a></a>
+                            </div>
+                            <div class="bot-bubble">
+                                <a></a>
+                            </div>
+                        </div>
+                        <div class="user-talk"> <!--사용자 말풍선-->
+                            <div class="user-bubble">
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <form class="message">
+                        <input placeholder="여기에 채팅을 입력하세요!">
+                        <button class="submit"><img src="{{ url_for('static', filename='src/message.png') }}"></button> <!--전송 기능 추가-->
+                    </form>
+                </div>
+            </div>
+            <!--파일 화면-->
+            <div class="file">
+                <div class="paper">
+                    <div class="content"> <!--입력 내용 띄우기-->
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="download"> <!--다운로드 기능 추가-->
+                        <div>
+                            <img src="{{ url_for('static', filename='src/download.png') }}">
+                            <a>다운로드</a>
+                        </div>
+                    </button>
+                    <button class="translate"> <!--버튼 기능 추가-->
+                        <div>
+                            <img src="{{ url_for('static', filename='src/pdf.png') }}">
+                            <a>번역하기</a>
+                        </div>
+                    </button>
+                </div>
+            </div>
+{% endblock %}

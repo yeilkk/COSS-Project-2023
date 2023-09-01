@@ -1,0 +1,42 @@
+{% extends 'template.html' %}
+{% block content %}
+    <!--챗봇 화면-->
+    <div class="chatbot">
+        <div class="bot">
+            <div class="bot-profile">
+                <img src="img/chatbot.png">
+            </div>
+            <div class="bot-name">
+                <a>Job Helper.</a>
+            </div>
+            <div class="bot-state">
+                <div></div>
+                <a>Online Now</a>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="talk">
+
+            </div>
+            <hr>
+            <form class="message">
+                <input type="text" placeholder="여기에 채팅을 입력하세요!"> <!--채팅 기능 추가-->
+                <button type="submit"><img src="img/message.png"></button> <!--전송 기능 추가-->
+            </form>
+        </div>
+    </div>
+    <!--파일 화면-->
+    <div class="file">
+        <div class="paper">
+            <div class="content">
+
+            </div>
+        </div>
+        <button class="download"> <!--다운로드 기능 추가-->
+            <a>다운로드</a>
+        </button>
+        <button class="translate"> <!--번역 기능 추가-->
+            <a>번역하기</a>
+        </button>
+    </div>
+{% endblock %}

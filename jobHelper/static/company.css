@@ -1,0 +1,253 @@
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+.resume {
+    background: #D7E2EC
+}
+
+.resume a {
+    color: #7E8792;
+}
+
+.company {
+    background: #0062FF;
+}
+
+.company a {
+    color: #FFF;
+}
+
+.main {
+    width: 64vw;
+    height: 80vh;
+    margin-top:2vh;
+    margin-left:1vw;
+    border-radius: 1.5vw;
+    background: #FAFBFF;
+}
+
+.info {
+    width: 100%;
+    height: 9vh;
+    display: flex;
+}
+
+.title {
+    color: #7E8792;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    top: 3vh;
+    left: 2vw;
+}
+
+.horizontal {
+    width: 60vw;
+    height: 0.1vh;
+    background: #646B73B2;
+    border: #646B73B2;
+}
+
+.content {
+    display: flex;
+}
+
+.writing {
+    overflow: auto;
+    width: 50%;
+    height: 65vh;
+    padding: 0.5vw;
+}
+
+.writing-count {
+    color: #0062FF;
+    font-family: Inter;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: absolute;
+    top: 1vh;
+}
+
+.writing-name {
+    color: #0062FF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: absolute;
+    top: 5vh;
+}
+
+.writing-files {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.writing-file {
+    display: flex;
+    position: relative;
+    width: 25vw;
+    height: 10vh;
+    border-radius: 1.8vw;
+    background: #EAF1FF;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.new {
+    border: none;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 1.2vw;
+    background: #0062FF80;
+    cursor: pointer;
+    margin-top: 5vh;
+}
+
+.new a {
+    color: #EEE;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.new:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    overflow: auto;
+    width: 50%;
+    height: 65vh;
+    padding: 0.5vw;
+}
+
+.completed-count {
+    color: #7E8792;
+    font-family: Inter;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: absolute;
+    top: 1vh;
+}
+
+.completed-name {
+    color: #7E8792;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: absolute;
+    top: 5vh;
+}
+
+.completed-files {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.completed-file {
+    display: flex;
+    position: relative;
+    width: 25vw;
+    height: 10vh;
+    border-radius: 1.8vw;
+    background: #EFF2F5;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    position: relative;
+}
+
+.left {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.vertical {
+    width: 0.2vw;
+    height: 5vh;
+    background: #FFF;;
+    border: #FFF;;
+}
+
+.name {
+    color: #646B73;
+    font-size: 1.5rem;
+    font-weight: 800;
+    position: absolute;
+    top: 2vh;
+    text-align: center;
+}
+
+.job {
+    color: #7E8792;
+    font-size: 1.2rem;
+    font-weight: 800;
+    position: absolute;
+    top: 5.5vh;
+    text-align: center;
+}
+
+.letter{
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration-line: underline;
+    position: absolute;
+    right: 6vw;
+}
+
+.interview {
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration-line: underline;
+    position: absolute;
+    right: 3vw;
+}
+
+.writing-file .letter, .writing-file .interview {
+    color: #0062FF;
+    top: 3.6vh;
+}
+
+.completed-file .letter, .completed-file .interview {
+    color: #2C4F7A;
+    top: 3.6vh;
+}
+
+.name, .job, .letter, .interview {
+    text-align: center;
+    font-family: Inter;
+    font-style: normal;
+    line-height: normal;
+}
