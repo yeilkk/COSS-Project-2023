@@ -1,67 +1,159 @@
 {% extends 'template.html' %}
-
 {% block style %}
-    <link href="{{ url_for('static', filename='resume.css') }}" rel="stylesheet">
+    <link  rel="stylesheet" href="{{ url_for('static', filename='resume.css') }}">
 {% endblock %}
 
 {% block content %}
-    <!--챗봇 화면-->
-    <div class="chatbot">
-                <div class="bot">
-                    <div class="bot-profile">
-                        <img src="../static/img/chatbot.png">
-                    </div>
-                    <div class="bot-name">
-                        <a>Job Helper.</a>
-                    </div>
-                    <div class="bot-state">
-                        <div></div>
-                        <a>Online Now</a>
-                    </div>
+    <!--작성화면-->
+    <div class="main">
+        <!--챗봇 화면-->
+        <div class="chatbot">
+            <div class="bot">
+                <div class="bot-profile">
+                    <img src="{{ url_for('static', filename='src/chatbot.png') }}">
                 </div>
-                <div class="chat">
-                    <div class="talk">
-                        <div class="bot-talk"> <!--챗봇 말풍선-->
-                            <img src="{{ url_for('static', filename='src/chatbot.png') }}">
+                <div class="bot-name">
+                    <a>Job Helper.</a>
+                </div>
+                <div class="bot-state">
+                    <div></div>
+                    <a>Online Now</a>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="talk">
+                    <!----------------------------여기부터 실제 구현 단계에서는 삭제---------------------------->
+                    <div class="bot-group">
+                        <div class="bot-talk"> <!--챗봇 메시지-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
                             <div class="bot-bubble">
-                                <a></a>
-                            </div>
-                            <div class="bot-bubble">
-                                <a></a>
+                                <a class="bot-message">김제니님, 안녕하세요!
+                                </a>
                             </div>
                         </div>
-                        <div class="user-talk"> <!--사용자 말풍선-->
-                            <div class="user-bubble">
+                        <div class="bot-talk">   <!--챗봇 메시지-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
+                            <div class="bot-bubble">
+                                <a class="bot-message">이력서 작성 경험이 아직 없다면,
+                                    활동을 같이 정리하면서 공통 이력서 작성을 해볼까요?
+                                </a>
+                            </div>
+                        </div>
+                        <div class="choice"> <!--선택-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
+                            <button class="yes">
+                                <a>네 🙆🏻‍♀</a>
+                            </button>
+                            <button class="no">
+                                <a>아니오, 직무 맞춤 이력서를 작성해주세요!</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-talk"> <!--사용자 메시지-->
+                        <div class="user-bubble">
+                            <a>네 🙆🏻‍♀</a>
+                        </div>
+                    </div>
+                    <div class="bot-group">
+                        <div class="bot-talk"> <!--챗봇 메시지-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
+                            <div class="bot-bubble">
+                                <a class="bot-message">회원가입 시 입력하신 정보는 다음과 같습니다.
 
+                                    [기본정보]
+                                    이름 : 김제니
+                                    연락처 : 010-1111-1111
+                                    이메일 : Jennykim@gmail.com
+                                    [학력사항]
+                                    서울대학교 / 2019.03 - 2023.08 / 경영학과, 통계학과
+                                    GPA 4.1_4.5 / 서울
+                                    [자격증]
+                                    OPIC English / AI / 2022.01
+                                    컴퓨터활용능력 / 1급 / 2022.02
+                                    ADsP / 2023.02
+
+                                    수정이 필요하신가요?
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <form class="message">
-                        <input placeholder="여기에 채팅을 입력하세요!">
-                        <button class="submit"><img src="{{ url_for('static', filename='src/message.png') }}"></button> <!--전송 기능 추가-->
-                    </form>
-                </div>
-            </div>
-            <!--파일 화면-->
-            <div class="file">
-                <div class="paper">
-                    <div class="content"> <!--입력 내용 띄우기-->
+                    <div class="choice"> <!--선택 부분-->
+                        <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
+                         <button class="yes">
+                            <a>네 (회원 정보 수정 🔗)</a>
+                        </button>
+                        <button class="no">
+                            <a>수정 필요 없어요!</a>
+                        </button>
                     </div>
+                    <div class="user-talk"> <!--사용자 메시지-->
+                        <div class="user-bubble">
+                            <a>수정 필요 없어요!</a>
+                        </div>
+                    </div>
+                    <div class="bot-group">
+                        <div class="bot-talk"> <!--챗봇 메시지-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
+                            <div class="bot-bubble">
+                                <a class="bot-message">그럼 이제 경력에 대해 질문드릴게요.
+                                    인턴을 포함한 근무 경험이 있으신가요?
+                                </a>
+                            </div>
+                        </div>
+                        <div class="choice"> <!--선택 부분-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}"">
+                             <button class="yes">
+                                <a>네 🙆🏻‍♀️</a>
+                            </button>
+                            <button class="no">
+                                <a>아니오🙅🏻‍♀️</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-talk"> <!--사용자 메시지-->
+                        <div class="user-bubble">
+                            <a>네 🙆🏻‍♀</a>
+                        </div>
+                    </div>
+                    <div class="bot-group">
+                        <div class="bot-talk"> <!--챗봇 메시지-->
+                            <img class="bot-img" src="{{ url_for('static', filename='src/chatbot.png') }}">
+                            <div class="bot-bubble">
+                                <a class="bot-message">인턴을 한 기관/회사 명은 어디인가요?
+                                    그리고 근무 기간도 알려주세요!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------------------------여기까지 실제 구현 단계에서는 삭제---------------------------->
                 </div>
-                <div class="buttons">
-                    <button class="download"> <!--다운로드 기능 추가-->
-                        <div>
-                            <img src="{{ url_for('static', filename='src/download.png') }}">
-                            <a>다운로드</a>
-                        </div>
-                    </button>
-                    <button class="translate"> <!--버튼 기능 추가-->
-                        <div>
-                            <img src="{{ url_for('static', filename='src/pdf.png') }}">
-                            <a>번역하기</a>
-                        </div>
-                    </button>
+                <hr>
+                <form class="message">
+                    <input placeholder="여기에 채팅을 입력하세요!">
+                    <button class="submit"><img src="{{ url_for('static', filename='src/message.png') }}"></button> <!--전송 기능 추가-->
+                </form>
+            </div>
+        </div>
+        <!--파일 화면-->
+        <div class="file">
+            <div class="paper">
+                <div class="content"> <!--입력 내용 띄우기-->
                 </div>
             </div>
+            <div class="buttons">
+                <button class="download"> <!--다운로드 기능 추가-->
+                    <div>
+                        <img src="{{ url_for('static', filename='src/download.png') }}">
+                        <a>다운로드</a>
+                    </div>
+                </button>
+                <button class="translate"> <!--버튼 기능 추가-->
+                    <div>
+                        <img src="{{ url_for('static', filename='src/translate.png') }}">
+                        <a>번역하기</a>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
 {% endblock %}

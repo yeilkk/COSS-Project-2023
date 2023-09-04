@@ -1,59 +1,59 @@
 {% extends 'template.html' %}
-
-{% block style%}
-    <link href="{{ url_for('static', filename='company.css') }}" rel="stylesheet">
+{% block style %}
+    <link  rel="stylesheet" href="{{ url_for('static', filename='company.css') }}">
 {% endblock %}
 
 {% block content %}
-    <!--작성 화면-->
+    <div class="main">
         <div class="info">
-                <a class="title">지원 기업 현황</a>
-            </div>
-            <hr class="horizontal">
-            <!--지원 기업 목록-->
-            <div class="content">
-                <div class="writing">
-                    <div class="information">
-                        <a class="writing-count">1</a> <!--작성중 파일 개수 출력-->
-                        <a class="writing-name">작성중</a>
-                    </div>
-                    <!--작성중 파일 목록-->
-                    <div class="writing-files">
-                        <div class="writing-file"> <!--개별 파일-->
-                            <div class="left">
-                                <a class="name">LG전자</a>
-                                <a class="job">데이터 사이언티스트</a>
-                            </div>
-                            <hr class="vertical">
-                            <div class="right">
-                                <a class="letter">자기소개서</a> <!--자기소개서 수정 기능 추가-->
-                                <a class="interview">면접</a>
-                            </div>
-                        </div>
-                        <button class="new">
-                            <a>+ 새 기업</a>
-                        </button>
-                    </div>
+            <a class="title">지원 기업 현황</a>
+        </div>
+        <hr class="horizontal">
+        <!--지원 기업 목록-->
+        <div class="content">
+            <div class="writing">
+                <div class="information">
+                    <a class="writing-count">1</a> <!--작성중 파일 개수 출력-->
+                    <a class="writing-name">작성중</a>
                 </div>
-                <div class="completed">
-                    <div class="information">
-                        <a class="completed-count">1</a> <!--완료된 파일 개수 출력-->
-                        <a class="completed-name">완료</a>
-                    </div>
-                    <!--완료된 파일 목록-->
-                    <div class="completed-files">
-                        <div class="completed-file"> <!--개별 파일-->
-                            <div class="left">
-                                <a class="name">넥슨</a>
-                                <a class="job">데이터 사이언티스트</a>
-                            </div>
-                            <hr class="vertical">
-                            <div class="right">
-                                <a class="letter">자기소개서</a> <!--자기소개서 수정 기능 추가-->
-                                <a class="interview">면접</a>
-                            </div>
+                <!--작성중 파일 목록-->
+                <div class="writing-files">
+                    <div class="writing-file"> <!--개별 파일-->
+                        <div class="left">
+                            <a class="name">LG전자</a>
+                            <a class="job">데이터 사이언티스트</a>
+                        </div>
+                        <hr class="vertical">
+                        <div class="right">
+                            <a class="letter">자기소개서</a> <!--자기소개서 수정 기능 추가-->
+                            <a class="interview">면접</a>
                         </div>
                     </div>
+                    <button class="new">
+                        <a>+ 새 기업</a>
+                    </button>
                 </div>
             </div>
+            <div class="completed">
+                <div class="information">
+                    <a class="completed-count">1</a> <!--완료된 파일 개수 출력-->
+                    <a class="completed-name">완료</a>
+                </div>
+                <!--완료된 파일 목록-->
+                <div class="completed-files">
+                    <div class="completed-file"> <!--개별 파일-->
+                        <div class="left">
+                            <a class="name">넥슨</a>
+                            <a class="job">데이터 사이언티스트</a>
+                        </div>
+                        <hr class="vertical">
+                        <div class="right">
+                            <a class="letter">자기소개서</a> <!--자기소개서 수정 기능 추가-->
+                            <a class="interview">면접</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

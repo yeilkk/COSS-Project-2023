@@ -1,7 +1,3 @@
-html {
-    font-size: 62.5%; /* 1rem = 10px */
-}
-
 .resume {
     background: #D7E2EC
 }
@@ -68,7 +64,7 @@ html {
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 800;
-    line-height: normal;
+    line-height: normal;    
     position: absolute;
     top: 1vh;
 }
@@ -139,7 +135,7 @@ html {
     font-size: 2.2rem;
     font-style: normal;
     font-weight: 800;
-    line-height: normal;
+    line-height: normal;    
     position: absolute;
     top: 1vh;
 }
@@ -202,7 +198,7 @@ html {
 .name {
     color: #646B73;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 800;   
     position: absolute;
     top: 2vh;
     text-align: center;
@@ -211,7 +207,7 @@ html {
 .job {
     color: #7E8792;
     font-size: 1.2rem;
-    font-weight: 800;
+    font-weight: 800;   
     position: absolute;
     top: 5.5vh;
     text-align: center;
