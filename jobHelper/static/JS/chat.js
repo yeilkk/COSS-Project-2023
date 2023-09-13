@@ -10,15 +10,16 @@ socket.on('client_message', function(message) {
         userBubble.className = "user-bubble";
         let divElement = document.createElement("div");
         divElement.className = "user-talk";
-        let content = document.createElement("a");
-        content.innerHTML = message;
-        // divElement.innerHTML = message;
+
+        // let content = document.createElement("a");
+        // content.innerHTML = message;
+        divElement.innerHTML = message;
 
         // divElement.appendChild(content);
         // talkDiv.appendChild(divElement);
         // userBubble.appendChild(divElement);
         // talkDiv.appendChild(userBubble);
-        talkDiv.appendChild(content);
+        talkDiv.appendChild(divElement);
         socket.emit('server_message');
 });
 
@@ -29,14 +30,17 @@ socket.on('client_message', function(message) {
         botBubble.className = "bot-bubble";
         let divElement = document.createElement("div");
         divElement.className = 'bot-talk';
-        let content = document.createElement("a");
-        content.innerHTML = Math.random().toFixed(3);
+
+        // let content = document.createElement("a");
+        // content.innerHTML = Math.random().toFixed(3);
+
+        divElement.innerHTML = Math.random().toFixed(3);
         // divElement.innerHTML = Math.random().toFixed(3);
 
         // divElement.appendChild(content);
         // botBubble.appendChild(divElement);
         // talkDiv.appendChild(botBubble);
-        talkDiv.appendChild(content);
+        talkDiv.appendChild(divElement);
         });
 
  document.getElementById('sendBtn').addEventListener('click', function(event) {
