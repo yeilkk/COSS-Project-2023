@@ -1,7 +1,5 @@
 from flask import Flask, render_template
-from flask_socketio import SocketIO, emit
-
-from jobHelper.app import socketio
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
 socketio = SocketIO(app)
