@@ -15,7 +15,7 @@ socket.on('client_message', function(message) {
 });
 
  socket.on('server_message', function() {
-        console.log("server_message: "+message)
+        console.log("server_message: response")
         let talkDiv = document.getElementById('talkDiv');
         let divElement = document.createElement("div");
         divElement.className = 'bot-talk';
