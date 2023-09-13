@@ -12,7 +12,12 @@ def open_index():
 
 @app.route('/resume')
 def move_resume():
-    # return render_template('resume.html')
+    return render_template('resume.html')
+    # return render_template('chat.html')
+
+
+@app.route('/chat')
+def move_resume():
     return render_template('chat.html')
 
 
