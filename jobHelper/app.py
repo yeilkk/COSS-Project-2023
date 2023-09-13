@@ -17,7 +17,7 @@ def move_resume():
 
 
 @app.route('/chat')
-def move_resume():
+def move_chat():
     return render_template('chat.html')
 
 
