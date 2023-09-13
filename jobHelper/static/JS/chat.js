@@ -7,9 +7,9 @@ socket.on('client_message', function(message) {
         console.log("client_message: "+message)
         let talkDiv = document.getElementById('talkDiv');
         let divElement = document.createElement("div");
-        divElement.className = "user-bubble";
-        // divElement.innerHTML = message.message;
-        divElement.textContent = message.message;
+        divElement.className = "user-talk";
+        divElement.innerHTML = message;
+        // divElement.textContent = message.message;
         talkDiv.appendChild(divElement);
         socket.emit('server_message');
 });
