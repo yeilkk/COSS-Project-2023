@@ -26,6 +26,7 @@ socket.on('client_message', function(message) {
     let message = document.getElementById('chatMessage').value;
     socket.emit('client_message', message);
     document.getElementById('chatMessage').value = '';
+    console.log("send: "+message)
 }
 
 
