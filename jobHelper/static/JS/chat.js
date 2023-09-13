@@ -13,10 +13,11 @@ socket.on('client_message', function(message) {
         let content = document.createElement("a");
         content.innerHTML = message;
         // divElement.innerHTML = message;
-    
+
         divElement.appendChild(content);
-        userBubble.appendChild(divElement);
-        talkDiv.appendChild(userBubble);
+        talkDiv.appendChild(divElement);
+        // userBubble.appendChild(divElement);
+        // talkDiv.appendChild(userBubble);
         socket.emit('server_message');
 });
 

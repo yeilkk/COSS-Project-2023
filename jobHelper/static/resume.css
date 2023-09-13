@@ -143,6 +143,8 @@
     display: flex;
     justify-content: flex-end;
     display: flex;
+    border-radius: 18px; /*비율 고정 위함*/
+    background: #0062FF80;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     padding-top: 1vh;
