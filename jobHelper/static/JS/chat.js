@@ -22,6 +22,14 @@ socket.on('client_message', function(message) {
             talkDiv.appendChild(divElement);
         });
 
+ document.getElementById('sendBtn').addEventListener('click', function(event) {
+        event.preventDefault(); // 기본 동작 막기
+        let message = document.getElementById('chatMessage').value;
+        socket.emit('client_message', message);
+        document.getElementById('chatMessage').value = '';
+        console.log("send: "+message)
+ });
+
  function sendMessage() {
     let message = document.getElementById('chatMessage').value;
     socket.emit('client_message', message);

@@ -30,7 +30,8 @@
                 <hr>
                 <form class="message">
                     <input id="chatMessage" placeholder="여기에 채팅을 입력하세요!">
-                    <button onclick="sendMessage()" class="submit"><img src="{{ url_for('static', filename='src/message.png') }}"></button> <!--전송 기능 추가-->
+{#                    <button onclick="sendMessage()" class="submit"><img src="{{ url_for('static', filename='src/message.png') }}"></button> <!--전송 기능 추가-->#}
+                     <button id="sendBtn" class="submit"><img src="{{ url_for('static', filename='src/message.png') }}"></button>
                 </form>
             </div>
         </div>
