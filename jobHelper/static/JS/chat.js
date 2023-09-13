@@ -6,21 +6,28 @@ socket.on('connect', function() {
 socket.on('client_message', function(message) {
         console.log("client_message: "+message)
         let talkDiv = document.getElementById('talkDiv');
+        let userBubble = document.createElement("div");
+        userBubble.className = "user-bubble";
         let divElement = document.createElement("div");
         divElement.className = "user-talk";
         divElement.innerHTML = message;
-        // divElement.textContent = message.message;
-        talkDiv.appendChild(divElement);
+
+        userBubble.appendChild(divElement);
+        talkDiv.appendChild(userBubble);
         socket.emit('server_message');
 });
 
  socket.on('server_message', function() {
         console.log("server_message: response")
         let talkDiv = document.getElementById('talkDiv');
+        let botBubble = document.createElement("div");
+        botBubble.className = "bot-bubble";
         let divElement = document.createElement("div");
         divElement.className = 'bot-talk';
-        divElement.textContent = Math.random().toFixed(3);
-        talkDiv.appendChild(divElement);
+        divElement.innerHTML = Math.random().toFixed(3);
+
+        botBubble.appendChild(divElement);
+        talkDiv.appendChild(botBubble);
         });
 
  document.getElementById('sendBtn').addEventListener('click', function(event) {
