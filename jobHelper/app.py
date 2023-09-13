@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO
 
 app = Flask(__name__)
-socketio = SocketIO(app)
+socketio = SocketIO(app, async_mode='gevent')
 
 
 @app.route('/')
