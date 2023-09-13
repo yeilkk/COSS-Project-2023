@@ -14,10 +14,11 @@ socket.on('client_message', function(message) {
         content.innerHTML = message;
         // divElement.innerHTML = message;
 
-        divElement.appendChild(content);
-        talkDiv.appendChild(divElement);
+        // divElement.appendChild(content);
+        // talkDiv.appendChild(divElement);
         // userBubble.appendChild(divElement);
         // talkDiv.appendChild(userBubble);
+        talkDiv.appendChild(content);
         socket.emit('server_message');
 });
 
@@ -32,9 +33,10 @@ socket.on('client_message', function(message) {
         content.innerHTML = Math.random().toFixed(3);
         // divElement.innerHTML = Math.random().toFixed(3);
 
-        divElement.appendChild(content);
-        botBubble.appendChild(divElement);
-        talkDiv.appendChild(botBubble);
+        // divElement.appendChild(content);
+        // botBubble.appendChild(divElement);
+        // talkDiv.appendChild(botBubble);
+        talkDiv.appendChild(content);
         });
 
  document.getElementById('sendBtn').addEventListener('click', function(event) {
