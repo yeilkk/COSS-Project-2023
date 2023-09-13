@@ -28,8 +28,7 @@ def move_company():
 
 @socketio.on('client_message')
 def get_client_message(message):
-    text = message.get('text', '')
-    socketio.emit('client_message', {'client_message': text})
+    socketio.emit('client_message', message)
 
 
 @socketio.on('server_message')
