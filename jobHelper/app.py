@@ -27,12 +27,12 @@ def move_company():
 
 
 @socketio.on('client_message')
-def handle_client_message(message):
+def get_client_message(message):
     socketio.emit('client_message', {'client_message': message})
 
 
 @socketio.on('server_message')
-def handle_client_message(message):
+def post_server_message():
     socketio.emit('server_message', {'server_message': "RESPONSE !!"})
 
 
